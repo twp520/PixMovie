@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaults>
+
+    <entry>
+        <key>timeSplash</key>
+        <value>15000</value>
+    </entry>
+
+    <entry>
+        <key>nativeRefreshTs</key>
+        <value>30000</value>
+    </entry>
+
+    <entry>
+        <key>visibleRows</key>
+        <value>3</value>
+    </entry>
+
+    <entry>
+        <key>interClickLimit</key>
+        <value>500</value>
+    </entry>
+    <entry>
+        <key>userActivity</key>
+        <value>2</value>
+    </entry>
+    <entry>
+        <key>ClickRate</key>
+        <value>false</value>
+    </entry>
+</defaults>

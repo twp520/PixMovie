@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/baseline_arrow_back__white_24"
+        app:title="@string/action_settings"
+        app:titleTextColor="?attr/colorOnPrimary" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/setting_language"
+            style="@style/SettingItem"
+            android:text="@string/language"
+            app:drawableStartCompat="@drawable/baseline_language_24" />
+
+        <TextView
+            android:id="@+id/setting_language_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="40dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            tools:text="Default" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/setting_privacy"
+        style="@style/SettingItem"
+        android:text="@string/privacy_policy"
+        app:drawableStartCompat="@drawable/baseline_shield_24" />
+
+    <TextView
+        android:id="@+id/setting_share"
+        style="@style/SettingItem"
+        android:text="@string/share"
+        app:drawableStartCompat="@drawable/baseline_share_24" />
+
+    <TextView
+        android:id="@+id/setting_feedback"
+        style="@style/SettingItem"
+        android:text="@string/feedback"
+        app:drawableStartCompat="@drawable/baseline_email_24" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/SettingItem"
+            android:text="@string/version_code"
+            app:drawableEndCompat="@null"
+            app:drawableStartCompat="@drawable/baseline_lightbulb_24" />
+
+        <TextView
+            android:id="@+id/setting_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="40dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            tools:text="Default" />
+    </FrameLayout>
+
+</LinearLayout>

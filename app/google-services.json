@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607232701508",
+    "project_id": "pixmovie-e9798",
+    "storage_bucket": "pixmovie-e9798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607232701508:android:888326c2dc289ef82fb811",
+        "android_client_info": {
+          "package_name": "com.flight.movie.infra.master"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM47ld6pvNxaZ1f2WiWy10pku6e6SZVtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

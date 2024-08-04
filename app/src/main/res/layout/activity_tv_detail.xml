@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.TvEpDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppTheme.MediumContrast">
+
+        <include
+            android:id="@+id/appbar_content"
+            layout="@layout/layout_detail_app_bar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/detail"
+        layout="@layout/detail_movie_scroll_layout" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

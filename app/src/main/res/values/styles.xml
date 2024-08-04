@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DiscoverFilterButton" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="drawableEndCompat">@drawable/baseline_arrow_drop_down_24</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="category_tag">
+        <item name="android:textAllCaps">true</item>
+        <item name="drawableStartCompat">@drawable/shape_category_tag</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="DetailTitleExpandStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SettingItem">
+        <item name="android:background">@drawable/shape_setting_item</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="drawableEndCompat">@drawable/baseline_chevron_right_18</item>
+    </style>
+
+    <style name="Widget.Theme.MovieMaster.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.MovieMaster.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>

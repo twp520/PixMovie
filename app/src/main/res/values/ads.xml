@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admob_id">ca-app-pub-1585958321791282~9408991975</string>
+    <string name="inter_test">ca-app-pub-1585958321791282/8070993608</string>
+    <string name="native_test">ca-app-pub-1585958321791282/5293621177</string>
+    <string name="fb_id">1934400543679127</string>
+    <string name="fb_token">27358fcf6fc80099e6e2548ad57ac06b</string>
+
+    <!-- test ids -->
+<!--        <string name="admob_id">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--        <string name="inter_test">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--        <string name="native_test">ca-app-pub-3940256099942544/2247696110</string>-->
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/item_tv_series_poster"
+        android:layout_width="0dp"
+        android:scaleType="centerCrop"
+        android:layout_height="160dp"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round="6dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/item_tv_series_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/item_tv_series_vote"
+        app:layout_constraintStart_toEndOf="@id/item_tv_series_poster"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Season 1" />
+
+    <TextView
+        android:id="@+id/item_tv_series_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@id/item_tv_series_name"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_series_name" />
+
+    <TextView
+        android:id="@+id/item_tv_series_vote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        app:drawableStartCompat="@drawable/baseline_star_rate_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="8.7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="..."
+        app:layout_constraintStart_toStartOf="@id/item_tv_series_name"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_series_time" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_tv_series_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/details"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/item_tv_series_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

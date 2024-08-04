@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_watch_list"
+            app:icon="@drawable/selector_fav_favorite"
+            app:iconGravity="textStart" />
+
+        <com.flight.movie.infra.master.money.TemplateView
+            android:id="@+id/detail_native_ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:gnt_template_type="@layout/ad_medium_view" />
+
+        <TextView
+            android:id="@+id/detail_ep_tag"
+            style="@style/category_tag"
+            android:layout_marginTop="8dp"
+            android:text="@string/episodes"
+            android:visibility="gone" />
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:id="@+id/episodes_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:minHeight="100dp"
+            android:visibility="gone"
+            app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+            app:shining="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detail_episodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:nestedScrollingEnabled="false" />
+        </com.lm.piccolo.view.PiccoloLayout>
+
+        <TextView
+            android:id="@+id/detail_tag_recommend"
+            style="@style/category_tag"
+            android:layout_marginTop="8dp"
+            android:text="@string/recommendations" />
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:id="@+id/recommend_loading"
+            android:layout_width="match_parent"
+            android:layout_height="352dp"
+            app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+            app:shining="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detail_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false" />
+        </com.lm.piccolo.view.PiccoloLayout>
+
+
+        <TextView
+            style="@style/category_tag"
+            android:layout_marginTop="8dp"
+            android:text="@string/overview" />
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:id="@+id/overview_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+            app:shining="true">
+
+            <TextView
+                android:id="@+id/detail_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                android:textSize="16sp" />
+        </com.lm.piccolo.view.PiccoloLayout>
+
+        <TextView
+            android:id="@+id/poster_tag"
+            style="@style/category_tag"
+            android:layout_marginTop="8dp"
+            android:text="@string/posters" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/poster_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/detail_posters"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1.778"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_posters_indication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/shape_type_bg"
+                android:gravity="center"
+                android:paddingStart="6dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="4dp"
+                android:textColor="?attr/colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1/10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/category_tag"
+            android:layout_marginTop="8dp"
+            android:text="@string/information" />
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:id="@+id/director_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+            app:shining="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/director" />
+
+            <TextView
+                android:id="@+id/detail_director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+
+        </com.lm.piccolo.view.PiccoloLayout>
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:id="@+id/status_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+            app:shining="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/statue" />
+
+            <TextView
+                android:id="@+id/detail_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+
+        </com.lm.piccolo.view.PiccoloLayout>
+
+        <com.lm.piccolo.view.PiccoloLayout
+            android:id="@+id/country_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:mask="com.lm.piccolo.drawable.ImageShiningDrawable"
+            app:shining="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country_detail" />
+
+            <TextView
+                android:id="@+id/detail_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+
+        </com.lm.piccolo.view.PiccoloLayout>
+
+        <TextView
+            style="@style/category_tag"
+            android:layout_marginTop="8dp"
+            android:text="@string/cast" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detail_cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

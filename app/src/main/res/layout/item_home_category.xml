@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/item_home_category_title"
+        style="@style/category_tag"
+        android:layout_marginStart="16dp"
+        android:textSize="22sp"
+        tools:text="@string/top_rate" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_home_category_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false"
+        android:nestedScrollingEnabled="false"
+        app:fastScrollEnabled="false" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_home_category_show_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/show_more" />
+
+    <com.flight.movie.infra.master.money.TemplateView
+        android:id="@+id/adView"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        app:gnt_template_type="@layout/ad_small_view"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

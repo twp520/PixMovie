@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Pix Movie</string>
+    <string name="app_name_first">Pix</string>
+    <string name="app_name_end">Movie</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Discover</string>
+    <string name="title_notifications">Personal</string>
+
+    <string name="trending">Trending</string>
+    <string name="popular">Popular</string>
+    <string name="top_rate">Top Rate</string>
+    <string name="now_playing">Now Playing</string>
+
+    <string name="show_more">Show More</string>
+    <string name="net_error">Oops! Network error,Please try again later!</string>
+    <string name="empty_common">There is no content!</string>
+    <string name="empty_common_filter">There is no content!\nPlease check your filter again or try again!</string>
+    <string name="empty_common_favorite">There is no content!\nBrowser all Movie and TV then add to Watchlist!</string>
+    <string name="try_again">Try again</string>
+    <string name="genres">Genres</string>
+    <string name="country">Region</string>
+    <string name="release">Release</string>
+    <string name="reset">Reset</string>
+    <string name="ok">OK</string>
+    <string name="watchlist">Watchlist</string>
+
+    <string-array name="home_titles">
+        <item>Movie</item>
+        <item>TV Shows</item>
+        <item>People</item>
+    </string-array>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tv_series">TvSeriesActivity</string>
+    <string name="title_activity_actor_detail">ActorDetailActivity</string>
+
+    <string name="recommendations">Recommendations</string>
+    <string name="episodes">Episodes</string>
+    <string name="posters">Posters</string>
+    <string name="overview">Overview</string>
+    <string name="information">Information</string>
+    <string name="cast">Cast</string>
+
+    <string name="director">Director</string>
+    <string name="statue">Status</string>
+    <string name="rate">Vote</string>
+    <string name="data">Data</string>
+    <string name="duration">Duration</string>
+    <string name="country_detail">Country</string>
+    <string name="genres_detail">Genres</string>
+    <string name="details">Details</string>
+    <string name="title_activity_tv_detail">TvDetailActivity</string>
+    <string name="go_discover">Go Discover</string>
+    <string name="min_s">%1$s Min\'s</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="share">Share App</string>
+    <string name="feedback">Feedback</string>
+    <string name="version_code">Version Code</string>
+    <string name="language">Language</string>
+    <string name="share_title">Track popular movies and TV shows</string>
+    <string name="add_to_watch_list">Add to Watchlist</string>
+    <string name="remove_watch_list">Added to Watchlist</string>
+    <string name="rate_us">Rate US</string>
+    <string name="lines">Lines</string>
+    <string name="s_e">S%1$d : E%2$d</string>
+    <string name="ad">Ad</string>
+    <string name="next">Next</string>
+    <string name="get_start">Get Started</string>
+    <string name="string_lines">Lines %1$d</string>
+    <string-array name="guide_tip">
+        <item>Get All information</item>
+        <item>Manage your Watchlist</item>
+        <item>Track popular Movie and TV Show</item>
+    </string-array>
+
+    <string name="play_message">According to relevant policies and to protect your privacy, you will be redirected to the system browser to play the movie. Click "Done" to jump to watch</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+</resources>

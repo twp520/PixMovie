@@ -181,22 +181,19 @@ public class TemplateView extends FrameLayout {
         ratingBar.setEnabled(false);
         iconView = findViewById(R.id.icon);
         mediaView = findViewById(R.id.media_view);
-
-        if (getTemplateTypeName().equals(MEDIUM_TEMPLATE)) {
-            callToActionViewA = findViewById(R.id.cta_a);
-            callToActionViewB = findViewById(R.id.cta);
-            boolean isB = InstallManager.INSTANCE.getRunB();
-            if (isB) {
-                callToActionViewB.setVisibility(VISIBLE);
-                callToActionViewA.setVisibility(GONE);
-                callToActionView = callToActionViewB;
-            } else {
-                callToActionViewB.setVisibility(GONE);
-                callToActionViewA.setVisibility(VISIBLE);
-                callToActionView = callToActionViewA;
-            }
+        boolean isB = InstallManager.INSTANCE.getRunB();
+        callToActionViewA = findViewById(R.id.cta_a);
+        callToActionViewB = findViewById(R.id.cta);
+        if (isB) {
+            setBackgroundResource(R.drawable.gnt_outline_shape_b);
+            callToActionViewB.setVisibility(VISIBLE);
+            callToActionViewA.setVisibility(GONE);
+            callToActionView = callToActionViewB;
         } else {
-            callToActionView = findViewById(R.id.cta);
+            callToActionViewB.setVisibility(GONE);
+            callToActionViewA.setVisibility(VISIBLE);
+            callToActionView = callToActionViewA;
+            setBackgroundResource(R.drawable.gnt_outline_shape);
         }
     }
 

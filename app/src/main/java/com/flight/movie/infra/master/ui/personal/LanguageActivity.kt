@@ -95,7 +95,7 @@ class LanguageActivity : AppCompatActivity() {
 
         binding.done.setOnClickListener {
             languageAdapter.checkedCountry()?.let {
-                DataClient.defLanguage = it.code
+                // DataClient.defLanguage = it.code
                 DataClient.defLanguageName.update { _ ->
                     it.name
                 }

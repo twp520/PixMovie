@@ -177,14 +177,11 @@ class TvEpDetailActivity : AppCompatActivity() {
                 castAdapter.submitList(it)
             }
         }
-        if (InstallManager.getRunB()) {
-            nativeLoader.refreshAd(this) {
-                Log.d(TAG, "onCreate: refreshAd !!!")
-                binding.detail.detailNativeAdView.isVisible = true
-                binding.detail.detailNativeAdView.setNativeAd(it)
-            }
-        } else {
-            binding.detail.detailNativeAdView.isVisible = false
+
+        nativeLoader.refreshAd(this) {
+            Log.d(TAG, "onCreate: refreshAd !!!")
+            binding.detail.detailNativeAdView.isVisible = true
+            binding.detail.detailNativeAdView.setNativeAd(it)
         }
 
     }

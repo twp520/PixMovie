@@ -24,6 +24,7 @@ import com.flight.movie.infra.master.money.ShareHelper
 import com.flight.movie.infra.master.ui.EXTRA_EP
 import com.flight.movie.infra.master.ui.EXTRA_FILM
 import com.flight.movie.infra.master.ui.base.QuickAdHeaderAdapter
+import com.flight.movie.infra.master.ui.base.VerItemDecoration
 import com.flight.movie.infra.master.ui.createFromTvSeriesDetail
 import com.flight.movie.infra.master.ui.detail.adapter.TvSeriesListAdapter
 import com.flight.movie.infra.master.ui.detail.vm.TvDetailViewModel
@@ -86,6 +87,7 @@ class TvSeriesActivity : AppCompatActivity() {
 
         filmLoading = Piccolo.createForList(binding.tvSeries)
         binding.tvSeries.layoutManager = LinearLayoutManager(this)
+        binding.tvSeries.addItemDecoration(VerItemDecoration(resources.getDimensionPixelSize(R.dimen.activity_vertical_margin)))
         filmLoading.items(
             intArrayOf(
                 R.layout.item_tv_series,

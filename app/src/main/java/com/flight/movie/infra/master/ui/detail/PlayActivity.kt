@@ -92,6 +92,7 @@ class PlayActivity : AppCompatActivity() {
 
         binding.playIcon.setOnClickListener {
             ShareHelper.forceClicked()
+            AnalysisUtils.logEvent("click_play_cover")
             showTipsDialog(playUrl)
         }
 
@@ -136,9 +137,11 @@ class PlayActivity : AppCompatActivity() {
             .setPositiveButton(R.string.done) { dialog, _ ->
                 dialog.dismiss()
                 jump2Browser(this, url)
+                AnalysisUtils.logEvent("click_play_dialog_done")
             }
             .setNegativeButton(R.string.cancel) { dialog, _ ->
                 dialog.dismiss()
+                AnalysisUtils.logEvent("click_play_dialog_cancel")
             }
             .show()
     }

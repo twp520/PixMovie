@@ -9,8 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/gnt_outline_shape">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cta"
@@ -99,6 +98,17 @@
 
         </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cta_a"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#2095F1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_margin="6dp"
+            android:lines="1"
+            android:textColor="#ffffff"
+            app:layout_constraintTop_toBottomOf="@id/icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.gms.ads.nativead.NativeAdView>

@@ -193,11 +193,16 @@ class MovieDetailActivity : AppCompatActivity() {
             }
         }
 
-        nativeLoader.refreshAd(this) {
-            Log.d(TAG, "onCreate: refreshAd !!!")
-            binding.detail.detailNativeAdView.isVisible = true
-            binding.detail.detailNativeAdView.setNativeAd(it)
+        if (InstallManager.getRunB()) {
+            nativeLoader.refreshAd(this) {
+                Log.d(TAG, "onCreate: refreshAd !!!")
+                binding.detail.detailNativeAdView.isVisible = true
+                binding.detail.detailNativeAdView.setNativeAd(it)
+            }
+        } else {
+            binding.detail.detailNativeAdView.isVisible = false
         }
+
     }
 
     @SuppressLint("SetTextI18n")

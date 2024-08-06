@@ -3,8 +3,8 @@ package com.flight.movie.infra.master
 import android.app.Application
 import android.util.Log
 import com.flight.movie.infra.master.money.ActivityUtil
-import com.flight.movie.infra.master.money.InterLoader
 import com.flight.movie.infra.master.money.Money
+import com.flight.movie.infra.master.money.NativeAdCache
 import com.google.firebase.Firebase
 import com.google.firebase.initialize
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -16,8 +16,6 @@ import com.google.firebase.remoteconfig.remoteConfigSettings
  * 2024/7/11
  */
 class MyApp : Application() {
-
-
 
     companion object {
         lateinit var instance: MyApp
@@ -38,5 +36,6 @@ class MyApp : Application() {
             Log.d("MyApp", "App onCreate: firebase fetch : ${it.isSuccessful}")
         }
         Money.init(applicationContext)
+        NativeAdCache.init(applicationContext)
     }
 }

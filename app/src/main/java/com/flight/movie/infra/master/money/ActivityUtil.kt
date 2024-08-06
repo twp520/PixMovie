@@ -33,7 +33,6 @@ object ActivityUtil {
                         }
                     } else {
                         //冷启动
-
                     }
                 }
             }
@@ -57,6 +56,9 @@ object ActivityUtil {
             override fun onActivityDestroyed(activity: Activity) {
                 if (activity is MainActivity) {
                     mainLaunch = false
+                }
+                if (activityCount == 0) {
+                    NativeAdCache.destroy()
                 }
             }
 

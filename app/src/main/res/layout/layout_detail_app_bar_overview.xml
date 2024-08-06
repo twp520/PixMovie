@@ -13,7 +13,7 @@
     app:expandedTitleMarginBottom="100dp"
     app:expandedTitleMarginStart="16dp"
     app:expandedTitleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
-    app:expandedTitleTextColor="?attr/colorOnPrimary"
+    app:expandedTitleTextColor="@color/white"
     app:layout_scrollFlags="scroll|exitUntilCollapsed"
     app:titleCollapseMode="scale"
     app:toolbarId="@+id/toolbar"
@@ -41,7 +41,7 @@
         android:maxLines="1"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textColor="?attr/colorOnPrimary"
+        android:textColor="@color/white"
         android:textSize="12sp"
         tools:text="adfaadfagag  gaga g" />
 
@@ -54,9 +54,9 @@
         android:maxLines="4"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textColor="?attr/colorOnPrimary"
+        android:textColor="@color/white"
         android:textSize="12sp"
-        tools:text="@string/large_text" />
+        tools:text="adfadfa df adfa2edfalkna adf" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

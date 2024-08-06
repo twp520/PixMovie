@@ -33,13 +33,18 @@ class NativeLoader(
     private val maxRetryCount = 5
     private var retryCount = 1
 
-    var currentNativeAd: NativeAd? = null
+    private var currentNativeAd: NativeAd? = null
 
     fun refreshAd(context: Context, function: Function<NativeAd, Unit>?) {
         retryCount = 1
         val current = currentNativeAd
         if (current != null) {
             function?.apply(current)
+        } else {
+            NativeAdCache.peekNativeAd()?.let {
+                currentNativeAd = it
+                function?.apply(it)
+            }
         }
         val builder = AdLoader.Builder(context, id)
         builder.forNativeAd { nativeAd ->

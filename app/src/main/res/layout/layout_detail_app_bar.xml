@@ -13,7 +13,7 @@
     app:expandedTitleMarginBottom="100dp"
     app:expandedTitleMarginStart="16dp"
     app:expandedTitleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
-    app:expandedTitleTextColor="?attr/colorOnPrimary"
+    app:expandedTitleTextColor="@color/white"
     app:layout_scrollFlags="scroll|exitUntilCollapsed"
     app:titleCollapseMode="scale"
     app:toolbarId="@+id/toolbar"
@@ -25,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/guide_1" />
 
     <View
         android:layout_width="match_parent"
@@ -46,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             app:drawableStartCompat="@drawable/baseline_star_rate_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +58,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:gravity="center"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/detail_rate"
             app:layout_constraintStart_toEndOf="@id/detail_rate"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +69,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:gravity="center"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/detail_rate"
             app:layout_constraintStart_toEndOf="@id/detail_data"
             app:layout_constraintTop_toTopOf="parent" />
@@ -76,13 +77,13 @@
         <TextView
             android:id="@+id/detail_genres"
             android:layout_width="0dp"
-            app:layout_constraintEnd_toStartOf="@id/fab"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/fab"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detail_rate"
             tools:text="AAA / AAA / BBB" />

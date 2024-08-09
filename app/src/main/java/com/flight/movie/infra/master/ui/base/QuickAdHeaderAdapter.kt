@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.BaseQuickAdapter
+import com.flight.movie.infra.master.money.InstallManager
 import com.flight.movie.infra.master.ui.state.ListAdItem
 import kotlinx.coroutines.CoroutineScope
 
@@ -13,7 +14,11 @@ import kotlinx.coroutines.CoroutineScope
  */
 class QuickAdHeaderAdapter(
     private val scope: CoroutineScope, private val from: String
-) : BaseQuickAdapter<ListAdItem, ListAdItemViewHolder>(listOf(ListAdItem())) {
+) : BaseQuickAdapter<ListAdItem, ListAdItemViewHolder>(
+    if (InstallManager.getRunB()) listOf(
+        ListAdItem()
+    ) else emptyList()
+) {
     override fun onBindViewHolder(holder: ListAdItemViewHolder, position: Int, item: ListAdItem?) {
         item ?: return
         holder.bindAd()

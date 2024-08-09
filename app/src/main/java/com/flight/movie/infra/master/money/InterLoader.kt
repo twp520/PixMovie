@@ -58,8 +58,12 @@ class InterLoader(
             })
     }
 
-    fun show(activity: Activity, runnable: Runnable) {
+    fun show(activity: Activity, isRunB: Boolean = InstallManager.getRunB(), runnable: Runnable) {
         Log.d("InterLoader", "show:  mInterstitialAd:${mInterstitialAd != null}")
+        if (!isRunB) {
+            runnable.run()
+            return
+        }
         val ad = mInterstitialAd
         if (ad == null) {
             runnable.run()
@@ -72,9 +76,6 @@ class InterLoader(
         if (!ShareHelper.isUserClickAllow()) {
             runnable.run()
             return
-        }
-        ad.setOnPaidEventListener {
-            AnalysisUtils.logAdPaidEvent(from, AnalysisUtils.TYPE_INTER, it.valueMicros.toString())
         }
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {
 

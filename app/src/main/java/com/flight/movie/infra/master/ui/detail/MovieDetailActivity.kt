@@ -143,11 +143,7 @@ class MovieDetailActivity : AppCompatActivity() {
         recommendAdapter.setOnItemClickListener { _, _, position ->
             ShareHelper.userActivityClicked()
             recommendAdapter.getItem(position)?.let {
-                if (InstallManager.getRunB()) {
-                    interEnterDetailLoader.show(this) {
-                        startDetail(this, it.mediaType ?: DataClient.TYPE_MOVIE, it)
-                    }
-                } else {
+                interEnterDetailLoader.show(this) {
                     startDetail(this, it.mediaType ?: DataClient.TYPE_MOVIE, it)
                 }
             }

@@ -54,13 +54,6 @@ class NativeLoader(
             if (needDestroyPrevious) {
                 currentNativeAd?.destroy()
                 currentNativeAd = nativeAd
-                nativeAd.setOnPaidEventListener {
-                    AnalysisUtils.logAdPaidEvent(
-                        from,
-                        AnalysisUtils.TYPE_NATIVE,
-                        it.valueMicros.toString()
-                    )
-                }
             }
             function?.apply(nativeAd)
         }

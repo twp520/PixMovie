@@ -47,6 +47,7 @@ class PlayActivity : AppCompatActivity() {
         val playerParams = intent.getParcelableExtra<PlayerParams>(EXTRA_FILM) ?: return
         val playUrl = viewModel.getPlayUrl(playerParams)
         Log.d(TAG, "onCreate: $playUrl")
+        AnalysisUtils.logEvent("play_act_show")
         binding.title.text = playerParams.filmName
         binding.seEp.isVisible = playerParams.filmType == DataClient.TYPE_TV
         binding.seEp.text = getString(R.string.s_e, playerParams.sNumber, playerParams.eNumber)
@@ -110,6 +111,7 @@ class PlayActivity : AppCompatActivity() {
         adLoader?.refreshAd(this) {
             binding.loadingLayout.isVisible = false
             binding.playAdView.setNativeAd(it)
+            AnalysisUtils.logEvent("play_show_native_ad")
             if (!isFirst) {
                 isFirst = false
                 interLoader.show(this) {

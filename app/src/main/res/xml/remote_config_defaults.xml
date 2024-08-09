@@ -8,7 +8,7 @@
 
     <entry>
         <key>nativeRefreshTs</key>
-        <value>30000</value>
+        <value>20000</value>
     </entry>
 
     <entry>
@@ -22,7 +22,7 @@
     </entry>
     <entry>
         <key>userActivity</key>
-        <value>2</value>
+        <value>0</value>
     </entry>
     <entry>
         <key>ClickRate</key>

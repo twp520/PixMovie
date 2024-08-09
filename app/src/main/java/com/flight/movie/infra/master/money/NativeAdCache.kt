@@ -69,7 +69,7 @@ object NativeAdCache {
 
     fun peekNativeAd(): NativeAd? {
         val cache = cacheList.removeFirstOrNull()
-        if (cacheList.isEmpty()) {
+        if (cacheList.size < 5) {
             load()
         }
         return cache

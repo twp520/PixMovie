@@ -138,7 +138,7 @@ class HomeCategoryViewModel : ViewModel() {
     }
 
     fun showInterAD(activity: Activity, runnable: Runnable) {
-        interLoader?.show(activity, runnable)
+        interLoader?.show(activity, runnable = runnable)
     }
 
     override fun onCleared() {

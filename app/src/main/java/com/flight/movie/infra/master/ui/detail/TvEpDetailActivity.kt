@@ -57,7 +57,7 @@ class TvEpDetailActivity : AppCompatActivity() {
     private lateinit var castAdapter: CastListAdapter
     private lateinit var nativeLoader: NativeLoader
     private lateinit var interEnterDetailLoader: InterLoader
-    private lateinit var interBackDetailLoader: InterLoader
+    private lateinit var interBackLoader: InterLoader
     private lateinit var interPlayLoader: InterLoader
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,7 +75,7 @@ class TvEpDetailActivity : AppCompatActivity() {
             getString(R.string.inter_test), lifecycleScope,
             AnalysisUtils.FROM_ENTER_DETAIL_TV_INTER
         )
-        interBackDetailLoader = InterLoader(
+        interBackLoader = InterLoader(
             getString(R.string.inter_test), lifecycleScope,
             AnalysisUtils.FROM_BACK_INTER
         )
@@ -84,7 +84,7 @@ class TvEpDetailActivity : AppCompatActivity() {
             AnalysisUtils.FROM_PLAY_INTER
         )
         interEnterDetailLoader.load(this)
-        interBackDetailLoader.load(this)
+        interBackLoader.load(this)
         interPlayLoader.load(this)
 
         binding.appbarContent.toolbar.setNavigationOnClickListener {
@@ -94,7 +94,7 @@ class TvEpDetailActivity : AppCompatActivity() {
         onBackPressedDispatcher.addCallback(object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 ShareHelper.userActivityClicked()
-                interPlayLoader.show(this@TvEpDetailActivity) {
+                interBackLoader.show(this@TvEpDetailActivity) {
                     finish()
                 }
             }
@@ -207,10 +207,8 @@ class TvEpDetailActivity : AppCompatActivity() {
                         epAdapter.notifyItemChanged(oldPosition)
                         epAdapter.notifyItemChanged(position)
                         bindEpisode(ep)
-                        if (InstallManager.getRunB()) {
-                            interEnterDetailLoader.show(this) {
+                        interEnterDetailLoader.show(this) {
 
-                            }
                         }
                     }
                 }
@@ -272,11 +270,7 @@ class TvEpDetailActivity : AppCompatActivity() {
             recommendAdapter.setOnItemClickListener { _, _, position ->
                 ShareHelper.userActivityClicked()
                 recommendAdapter.getItem(position)?.let {
-                    if (InstallManager.getRunB()) {
-                        interEnterDetailLoader.show(this) {
-                            startDetail(this, it.mediaType ?: DataClient.TYPE_TV, it)
-                        }
-                    } else {
+                    interEnterDetailLoader.show(this) {
                         startDetail(this, it.mediaType ?: DataClient.TYPE_TV, it)
                     }
                 }

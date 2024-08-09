@@ -41,7 +41,7 @@ object AnalysisUtils {
         val params = Bundle()
         params.putBoolean("isRunB", InstallManager.getRunB())
         params.putAll(args)
-        Firebase.analytics.logEvent(event, Bundle())
+        Firebase.analytics.logEvent(event, params)
         // Log.d("AnalysisUtils", "logEvent: $event")
     }
 
@@ -59,12 +59,4 @@ object AnalysisUtils {
         logEvent(eventName, params)
     }
 
-    fun logAdPaidEvent(
-        from: String,
-        type: String,
-        price: String
-    ) {
-        val eventName = if (type == TYPE_NATIVE) "ad_native_revenue" else "ad_inter_revenue"
-        logEvent(eventName, bundleOf(Pair("revenue", price), Pair("placements", from)))
-    }
 }

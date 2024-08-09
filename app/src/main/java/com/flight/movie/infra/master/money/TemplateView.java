@@ -161,6 +161,9 @@ public class TemplateView extends FrameLayout {
             templateType =
                     attributes.getResourceId(
                             R.styleable.TemplateView_gnt_template_type, R.layout.ad_medium_view);
+            if (!InstallManager.INSTANCE.getRunB()) {
+                templateType = R.layout.ad_small_view;
+            }
         } finally {
             attributes.recycle();
         }

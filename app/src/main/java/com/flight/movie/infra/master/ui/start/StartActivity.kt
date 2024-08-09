@@ -46,7 +46,7 @@ class StartActivity : AppCompatActivity() {
                     }
                 }
                 if (load) {
-                    Money.splashInterLoader.show(this@StartActivity) {
+                    Money.splashInterLoader.show(this@StartActivity,true) {
                         ShareHelper.forceClicked()
                         ActivityUtil.startToMain(this@StartActivity)
                     }

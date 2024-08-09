@@ -18,7 +18,6 @@ import com.flight.movie.infra.master.data.TVSeriesDetail
 import com.flight.movie.infra.master.data.TvSeries
 import com.flight.movie.infra.master.databinding.ActivityTvSeriesBinding
 import com.flight.movie.infra.master.money.AnalysisUtils
-import com.flight.movie.infra.master.money.InstallManager
 import com.flight.movie.infra.master.money.InterLoader
 import com.flight.movie.infra.master.money.ShareHelper
 import com.flight.movie.infra.master.ui.EXTRA_EP
@@ -117,11 +116,7 @@ class TvSeriesActivity : AppCompatActivity() {
                 tvSeriesListAdapter.addOnItemChildClickListener(R.id.item_tv_series_btn) { _, _, position ->
                     ShareHelper.userActivityClicked()
                     tvSeriesListAdapter.getItem(position)?.let { se ->
-                        if (InstallManager.getRunB()) {
-                            interEnterDetail.show(this) {
-                                go2TvEpDetail(it, se, filmItem)
-                            }
-                        } else {
+                        interEnterDetail.show(this) {
                             go2TvEpDetail(it, se, filmItem)
                         }
                     }

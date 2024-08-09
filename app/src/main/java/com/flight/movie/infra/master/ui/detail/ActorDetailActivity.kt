@@ -16,7 +16,6 @@ import com.flight.movie.infra.master.data.DataClient
 import com.flight.movie.infra.master.data.PeopleDetail
 import com.flight.movie.infra.master.databinding.ActivityActorDetailBinding
 import com.flight.movie.infra.master.money.AnalysisUtils
-import com.flight.movie.infra.master.money.InstallManager
 import com.flight.movie.infra.master.money.InterLoader
 import com.flight.movie.infra.master.money.ShareHelper
 import com.flight.movie.infra.master.ui.COL_COUNT
@@ -102,11 +101,7 @@ class ActorDetailActivity : AppCompatActivity() {
             ShareHelper.userActivityClicked()
             filmAdapter.getItem(position)?.let {
                 if (it.mediaType != null) {
-                    if (InstallManager.getRunB()) {
-                        interEnterDetailLoader.show(this) {
-                            startDetail(this, it.mediaType, it)
-                        }
-                    } else {
+                    interEnterDetailLoader.show(this) {
                         startDetail(this, it.mediaType, it)
                     }
                 }

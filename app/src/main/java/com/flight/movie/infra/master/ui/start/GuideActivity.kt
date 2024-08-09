@@ -36,12 +36,7 @@ class GuideActivity : AppCompatActivity() {
                     it + 1
                 }
             } else {
-                if (InstallManager.getRunB()) {
-                    Money.guideInterLoader.show(this) {
-                        startActivity(Intent(this, MainActivity::class.java))
-                        finish()
-                    }
-                } else {
+                Money.guideInterLoader.show(this) {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 }

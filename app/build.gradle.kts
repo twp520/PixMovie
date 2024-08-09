@@ -15,8 +15,8 @@ android {
         applicationId = "com.flight.movie.infra.master"
         minSdk = 24
         targetSdk = 34
-        versionCode = 9
-        versionName = "1.2.9"
+        versionCode = 12
+        versionName = "1.3.2"
         archivesName = "Pix_Movie_$versionName"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

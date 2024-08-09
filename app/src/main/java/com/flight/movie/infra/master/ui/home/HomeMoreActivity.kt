@@ -12,7 +12,6 @@ import com.flight.movie.infra.master.data.DataClient
 import com.flight.movie.infra.master.data.FilmItem
 import com.flight.movie.infra.master.databinding.ActivityHomeMoreBinding
 import com.flight.movie.infra.master.money.AnalysisUtils
-import com.flight.movie.infra.master.money.InstallManager
 import com.flight.movie.infra.master.money.InterLoader
 import com.flight.movie.infra.master.money.ShareHelper
 import com.flight.movie.infra.master.ui.base.CommonListViewHelper
@@ -74,11 +73,7 @@ class HomeMoreActivity : AppCompatActivity() {
             ShareHelper.userActivityClicked()
             val item = homeMoreListAdapter.getItem(position)
             if (item is FilmItem) {
-                if (InstallManager.getRunB()) {
-                    interLoader.show(this) {
-                        startDetail(this, type, item)
-                    }
-                } else {
+                interLoader.show(this) {
                     startDetail(this, type, item)
                 }
             }

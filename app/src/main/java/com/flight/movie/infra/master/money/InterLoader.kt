@@ -64,7 +64,7 @@ class InterLoader(
             runnable.run()
             return
         }
-        val ad = mInterstitialAd
+        val ad = mInterstitialAd ?: InterAdCache.peekNativeAd(activity)
         if (ad == null) {
             runnable.run()
             if (!isLoading) {
@@ -76,6 +76,9 @@ class InterLoader(
         if (!ShareHelper.isUserClickAllow()) {
             runnable.run()
             return
+        }
+        ad.setOnPaidEventListener {
+            AnalysisUtils.logAdPaid(from, AnalysisUtils.TYPE_INTER, it, false)
         }
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {
 

@@ -18,6 +18,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+
 /**
  * create by colin
  * 2024/7/21
@@ -43,6 +44,9 @@ class NativeLoader(
         } else {
             NativeAdCache.peekNativeAd()?.let {
                 currentNativeAd = it
+                it.setOnPaidEventListener { value ->
+                    AnalysisUtils.logAdPaid(from, AnalysisUtils.TYPE_NATIVE, value, true)
+                }
                 function?.apply(it)
             }
         }
@@ -51,6 +55,9 @@ class NativeLoader(
             // You must call destroy on old ads when you are done with them,
             // otherwise you will have a memory leak.
             Log.d(TAG, "refreshAd:  forNativeAd->")
+            nativeAd.setOnPaidEventListener { value ->
+                AnalysisUtils.logAdPaid(from, AnalysisUtils.TYPE_NATIVE, value, false)
+            }
             if (needDestroyPrevious) {
                 currentNativeAd?.destroy()
                 currentNativeAd = nativeAd
@@ -108,6 +115,7 @@ class NativeLoader(
 
         adLoader.loadAd(AdRequest.Builder().build())
     }
+
 
     fun delayLoad(
         delay: Long = 10000,

@@ -2,6 +2,8 @@ package com.flight.movie.infra.master.money
 
 import android.os.Bundle
 import androidx.core.os.bundleOf
+import com.google.android.gms.ads.AdValue
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
 
@@ -57,6 +59,18 @@ object AnalysisUtils {
         val params = bundleOf()
         params.putString("placements", from)
         logEvent(eventName, params)
+    }
+
+
+    fun logAdPaid(from: String, type: String, adValue: AdValue, needImpression: Boolean) {
+        val bundle = Bundle()
+        bundle.putDouble(FirebaseAnalytics.Param.VALUE, adValue.valueMicros.toDouble() / 1000000.0)
+        bundle.putString(FirebaseAnalytics.Param.CURRENCY, "USD")
+        bundle.putString("placements", from)
+        logEvent("Ad_Impression_Revenue", bundle)
+        if (needImpression) {
+            logAdImpressionEvent(from, type)
+        }
     }
 
 }

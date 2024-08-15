@@ -46,8 +46,8 @@ class LanguageActivity : AppCompatActivity() {
         }
         binding.list.adapter = languageAdapter
 
-        val click = Firebase.remoteConfig.getBoolean("ClickRate")
-        binding.adView.setCanClickAd(click)
+        // val click = Firebase.remoteConfig.getBoolean("ClickRate")
+        // binding.adView.setCanClickAd(click)
 
         lifecycleScope.launch {
             val data = withContext(Dispatchers.IO) {

@@ -26,11 +26,12 @@
 
     <TextView
         android:id="@+id/tv_tip"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:textColor="@color/white"
         android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_next"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/btn_next"
         tools:text="aaa" />
@@ -79,6 +80,6 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:visibility="gone"
-        app:gnt_template_type="@layout/ad_small_view"
+        app:gnt_template_type="@layout/ad_medium_view"
         app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

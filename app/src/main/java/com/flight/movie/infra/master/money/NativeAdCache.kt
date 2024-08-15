@@ -49,15 +49,6 @@ object NativeAdCache {
                         load()
                     }
                 }
-
-                override fun onAdImpression() {
-                    Log.d(TAG, "NativeAdCache Native onAdImpression: ")
-                    AnalysisUtils.logAdImpressionEvent("cache_ad", AnalysisUtils.TYPE_NATIVE)
-                }
-
-                override fun onAdClicked() {
-                    AnalysisUtils.logAdClickedEvent("cache_ad", AnalysisUtils.TYPE_NATIVE)
-                }
             }
         ).build()
         load()

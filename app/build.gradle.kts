@@ -15,8 +15,8 @@ android {
         applicationId = "com.flight.movie.infra.master"
         minSdk = 24
         targetSdk = 34
-        versionCode = 12
-        versionName = "1.3.2"
+        versionCode = 13
+        versionName = "1.3.3"
         archivesName = "Pix_Movie_$versionName"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -84,7 +84,7 @@ dependencies {
     implementation("com.google.ads.mediation:applovin:12.5.0.1")
     implementation("com.google.ads.mediation:vungle:7.4.0.0")
     implementation("com.google.ads.mediation:facebook:6.17.0.0")
-    implementation("com.google.ads.mediation:mintegral:16.7.81.0")
+    implementation("com.google.ads.mediation:mintegral:16.7.91.0")
     implementation("com.google.ads.mediation:pangle:6.0.0.8.0")
     //fb
     implementation ("com.facebook.android:facebook-android-sdk:12.3.0")

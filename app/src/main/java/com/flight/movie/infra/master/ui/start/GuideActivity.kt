@@ -56,8 +56,8 @@ class GuideActivity : AppCompatActivity() {
             }
         }
 
-        val click = Firebase.remoteConfig.getBoolean("ClickRate")
-        binding.adView.setCanClickAd(click)
+        // val click = Firebase.remoteConfig.getBoolean("ClickRate")
+        // binding.adView.setCanClickAd(click)
 
         if (InstallManager.getRunB()) {
             Money.guideNativeLoader.refreshAd(this) {

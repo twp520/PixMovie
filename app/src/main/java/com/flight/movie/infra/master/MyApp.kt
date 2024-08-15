@@ -3,6 +3,7 @@ package com.flight.movie.infra.master
 import android.app.Application
 import android.util.Log
 import com.flight.movie.infra.master.money.ActivityUtil
+import com.flight.movie.infra.master.money.InterAdCache
 import com.flight.movie.infra.master.money.Money
 import com.flight.movie.infra.master.money.NativeAdCache
 import com.google.firebase.Firebase
@@ -37,5 +38,6 @@ class MyApp : Application() {
         }
         Money.init(applicationContext)
         NativeAdCache.init(applicationContext)
+        InterAdCache.load(applicationContext)
     }
 }

@@ -3,7 +3,6 @@ package com.flight.movie.infra.master.money
 import android.content.Context
 import com.flight.movie.infra.master.R
 import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.RequestConfiguration
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.plus

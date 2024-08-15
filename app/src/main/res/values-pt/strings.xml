@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Filme Pix</string>
+    <string name="app_name_first">Pix</string>
+    <string name="app_name_end">Filme</string>
+    <string name="title_home">Casa</string>
+    <string name="title_dashboard">Descobrir</string>
+    <string name="title_notifications">Pessoal</string>
+
+    <string name="trending">Tendências</string>
+    <string name="popular">Popular</string>
+    <string name="top_rate">Taxa máxima</string>
+    <string name="now_playing">Agora jogando</string>
+
+    <string name="show_more">Mostrar mais</string>
+    <string name="net_error">Ops! Erro de rede.</string>
+    <string name="empty_common">Não há conteúdo!</string>
+    <string name="empty_common_filter">Não há conteúdo!\nVerifique novamente o seu filtro ou tente novamente!</string>
+    <string name="empty_common_favorite">Não há conteúdo!\nNavegue por todos os filmes e programas de televisão e adicione à lista de observação!</string>
+    <string name="try_again">Tente novamente</string>
+    <string name="genres">Gêneros</string>
+    <string name="country">Região</string>
+    <string name="release">Lançamento</string>
+    <string name="reset">Reiniciar</string>
+    <string name="ok">OK</string>
+    <string name="watchlist">Lista de observação</string>
+
+    <string-array name="home_titles">
+        <item>Filme</item>
+        <item>Programas de TV</item>
+        <item>Pessoas</item>
+    </string-array>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_tv_series">TvSeriesActivity</string>
+    <string name="title_activity_actor_detail">ActorDetailActivity</string>
+
+    <string name="recommendations">Recomendações</string>
+    <string name="episodes">Episódios</string>
+    <string name="posters">Cartazes</string>
+    <string name="overview">Visão geral</string>
+    <string name="information">Informação</string>
+    <string name="cast">Elenco</string>
+
+    <string name="director">Diretor</string>
+    <string name="statue">Estatuto</string>
+    <string name="rate">Voto</string>
+    <string name="data">Data</string>
+    <string name="duration">Duração</string>
+    <string name="country_detail">País</string>
+    <string name="genres_detail">Gêneros</string>
+    <string name="details">Detalhes</string>
+    <string name="title_activity_tv_detail">TvDetailActivity</string>
+    <string name="go_discover">Vá descobrir</string>
+    <string name="min_s">%1$s Min\'s</string>
+    <string name="privacy_policy">política de Privacidade</string>
+    <string name="share">Partilhar aplicativo</string>
+    <string name="feedback">Feedback</string>
+    <string name="version_code">Código da versão</string>
+    <string name="language">Idioma</string>
+    <string name="share_title">Acompanhe os filmes e programas de televisão populares</string>
+    <string name="add_to_watch_list">Adicionar à lista de observação</string>
+    <string name="remove_watch_list">Adicionado à lista de observação</string>
+    <string name="rate_us">Avalie os EUA</string>
+    <string name="lines">Linhas</string>
+    <string name="s_e">S%1$d : E%2$d</string>
+    <string name="ad">Ad</string>
+    <string name="next">Seguinte</string>
+    <string name="get_start">Comece</string>
+    <string name="string_lines">Linhas %1$d</string>
+    <string-array name="guide_tip">
+        <item>Obtenha todas as informações</item>
+        <item>Gira a sua lista de observação</item>
+        <item>Acompanhe os filmes e programas de televisão populares</item>
+    </string-array>
+
+    <string name="play_message">De acordo com as políticas relevantes e para proteger a sua privacidade, será redirecionado para o navegador do sistema para reproduzir o filme. Clique em "Concluído" para saltar para assistir</string>
+    <string name="done">Concluído</string>
+    <string name="cancel">Cancelar</string>
+</resources>

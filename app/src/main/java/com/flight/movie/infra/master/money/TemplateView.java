@@ -49,10 +49,8 @@ public class TemplateView extends FrameLayout {
     private ImageView iconView;
     private MediaView mediaView;
     private Button callToActionView;
-    private Button callToActionViewA;
-    private Button callToActionViewB;
 
-    private boolean canClickAd = true;
+    // private boolean canClickAd = true;
 
     private static final String MEDIUM_TEMPLATE = "medium_template";
     private static final String SMALL_TEMPLATE = "small_template";
@@ -185,8 +183,8 @@ public class TemplateView extends FrameLayout {
         iconView = findViewById(R.id.icon);
         mediaView = findViewById(R.id.media_view);
         boolean isB = InstallManager.INSTANCE.getRunB();
-        callToActionViewA = findViewById(R.id.cta_a);
-        callToActionViewB = findViewById(R.id.cta);
+        Button callToActionViewA = findViewById(R.id.cta_a);
+        Button callToActionViewB = findViewById(R.id.cta);
         if (isB) {
             setBackgroundResource(R.drawable.gnt_outline_shape_b);
             callToActionViewB.setVisibility(VISIBLE);
@@ -200,21 +198,21 @@ public class TemplateView extends FrameLayout {
         }
     }
 
-    public void setCanClickAd(boolean canClickAd) {
-        this.canClickAd = canClickAd;
-    }
+    // public void setCanClickAd(boolean canClickAd) {
+    //     this.canClickAd = canClickAd;
+    // }
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return !canClickAd;
-    }
+    // @Override
+    // public boolean onInterceptTouchEvent(MotionEvent ev) {
+    //     return !canClickAd;
+    // }
 
-    @SuppressLint("ClickableViewAccessibility")
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (canClickAd) {
-            return super.onTouchEvent(event);
-        }
-        return true;
-    }
+    // @SuppressLint("ClickableViewAccessibility")
+    // @Override
+    // public boolean onTouchEvent(MotionEvent event) {
+    //     if (canClickAd) {
+    //         return super.onTouchEvent(event);
+    //     }
+    //     return true;
+    // }
 }

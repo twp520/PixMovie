@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">فيلم بيكس</string>
+    <string name="app_name_first">بيكسل</string>
+    <string name="app_name_end">بيكس</string>
+    <string name="title_home">بيت</string>
+    <string name="title_dashboard">يكتشف</string>
+    <string name="title_notifications">شخصي</string>
+
+    <string name="trending">تتجه</string>
+    <string name="popular">شائع</string>
+    <string name="top_rate">أعلى معدل</string>
+    <string name="now_playing">التشغيل الآن</string>
+
+    <string name="show_more">عرض المزيد</string>
+    <string name="net_error">أُووبس! خطأ في الشبكة، يرجى المحاولة مرة أخرى في وقت لاحق!</string>
+    <string name="empty_common">لا يوجد محتوى!</string>
+    <string name="empty_common_filter">لا يوجد محتوى!n\الرجاء التحقق من عامل التصفية مرة أخرى أو المحاولة مرة أخرى!</string>
+    <string name="empty_common_favorite">لا يوجد محتوى!n\تصفح جميع الأفلام والبرامج التلفزيونية ثم قم بإضافتها إلى قائمة المراقبة!</string>
+    <string name="try_again">حاول ثانية</string>
+    <string name="genres">الأنواع</string>
+    <string name="country">منطقة</string>
+    <string name="release">يطلق</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="ok">نعم</string>
+    <string name="watchlist">قائمة المراقبة</string>
+
+    <string-array name="home_titles">
+        <item>فيلم</item>
+        <item>تلفزيون</item>
+        <item>الناس</item>
+    </string-array>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">إعدادات</string>
+    <string name="title_activity_tv_series">TvSeriesActivity</string>
+    <string name="title_activity_actor_detail">ActorDetailActivity</string>
+
+    <string name="recommendations">التوصيات</string>
+    <string name="episodes">الحلقات</string>
+    <string name="posters">الملصقات</string>
+    <string name="overview">ملخص</string>
+    <string name="information">معلومة</string>
+    <string name="cast">يقذف</string>
+
+    <string name="director">مخرج</string>
+    <string name="statue">حالة</string>
+    <string name="rate">تصويت</string>
+    <string name="data">بيانات</string>
+    <string name="duration">مدة</string>
+    <string name="country_detail">دولة</string>
+    <string name="genres_detail">الأنواع</string>
+    <string name="details">تفاصيل</string>
+    <string name="title_activity_tv_detail">TvDetailActivity</string>
+    <string name="go_discover">اذهب واكتشف</string>
+    <string name="min_s">%1$s Min\'s</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="share">مشاركة التطبيق</string>
+    <string name="feedback">تعليق</string>
+    <string name="version_code">رمز الإصدار</string>
+    <string name="language">لغة</string>
+    <string name="share_title">تتبع الأفلام والبرامج التلفزيونية الشهيرة</string>
+    <string name="add_to_watch_list">أضف إلى قائمة المراقبة</string>
+    <string name="remove_watch_list">تمت الإضافة إلى قائمة المراقبة</string>
+    <string name="rate_us">قيم الولايات المتحدة</string>
+    <string name="lines">خطوط</string>
+    <string name="s_e">S%1$d : E%2$d</string>
+    <string name="ad">Ad</string>
+    <string name="next">التالي</string>
+    <string name="get_start">ابدأ</string>
+    <string name="string_lines">خطوط %1$d</string>
+    <string-array name="guide_tip">
+        <item>الحصول على جميع المعلومات</item>
+        <item>إدارة قائمة المراقبة الخاصة بك</item>
+        <item>تتبع الأفلام والبرامج التلفزيونية الشهيرة</item>
+    </string-array>
+
+    <string name="play_message">وفقًا للسياسات ذات الصلة ولحماية خصوصيتك، ستتم إعادة توجيهك إلى متصفح النظام لتشغيل الفيلم. انقر فوق "تم" للانتقال للمشاهدة</string>
+    <string name="done">منتهي</string>
+    <string name="cancel">يلغي</string>
+</resources>
